@@ -33,7 +33,7 @@ $(document).ready(function() {
 	var condition = task.getCondition();
 
 	var data = {};
-	var inds = shuffle([0,1]);
+	var inds = shuffle([0,7]);
 	data.imglist_demo = getlist_test_demo(Q1_id,Q2_id,Q3_id,Q4_id,Q5_id,Q6_id,Q7_id,Q8_id,inds);
 	data.imglist_list_demo = getlist_train_demo(nway,inds);
 	data.imglist_test = getlist_test(condition,ntask,nway);
