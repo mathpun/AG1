@@ -2,19 +2,19 @@ var task;
 $(document).ready(function() {
 
 	// Parameters
-	var ntask = 12; // how many different tasks (alphabets) are there?
+	var ntask = 16; // how many different tasks (alphabets) are there?
 	var nway = 4; // n-way classification tasl
 
 	// Selected demo images
 	//latin_id = 2;
-	Q1_id = 1;
-	Q2_id = 2;
-//	Q3_id = 1;
-//	Q4_id = 3;
-//	Q5_id = 3;
-//	Q6_id = 2;
-//	Q7_id = 1;
-//	Q8_id = 3;
+	Q1_id = 2;
+	Q2_id = 3;
+	Q3_id = 1;
+	Q4_id = 2;
+	Q5_id = 4;
+	Q6_id = 3;
+	Q7_id = 1;
+	Q8_id = 2;
 //	Q9_id = 1;
 //	Q10_id = 3;
 	//Q11_id = 2;
@@ -34,7 +34,7 @@ $(document).ready(function() {
 
 	var data = {};
 	var inds = shuffle([0,1]);
-	data.imglist_demo = getlist_test_demo(Q1_id,Q2_id,inds);
+	data.imglist_demo = getlist_test_demo(Q1_id,Q2_id,Q3_id,Q4_id,Q5_id,Q6_id,Q7_id,Q8_id,inds);
 	data.imglist_list_demo = getlist_train_demo(nway,inds);
 	data.imglist_test = getlist_test(condition,ntask,nway);
 	data.imglist_list_train = getlist_train(condition,ntask,nway);
@@ -72,11 +72,11 @@ var getlist_test_demo = function (Q1_id,Q2_id,r) {
 //  	list[0] = dname + 'latin_test' + latin_id + '.png';
 	list[r[0]] = dname + 'Q1_test' + Q1_id + '.png';
 	list[r[1]] = dname + 'Q2_test' + Q2_id + '.png';
-//	list[r[2]] = dname + 'Q3_test' + Q3_id + '.png';
-//	list[r[3]] = dname + 'Q4_test' + Q4_id + '.png';
-//	list[r[4]] = dname + 'Q5_test' + Q5_id + '.png';
-//	list[r[6]] = dname + 'Q7_test' + Q7_id + '.png';
-//	list[r[7]] = dname + 'Q8_test' + Q8_id + '.png';
+	list[r[2]] = dname + 'Q3_test' + Q3_id + '.png';
+	list[r[3]] = dname + 'Q4_test' + Q4_id + '.png';
+	list[r[4]] = dname + 'Q5_test' + Q5_id + '.png';
+	list[r[6]] = dname + 'Q7_test' + Q7_id + '.png';
+	list[r[7]] = dname + 'Q8_test' + Q8_id + '.png';
 //	list[r[8]] = dname + 'Q9_test' + Q9_id + '.png';
 //	list[r[9]] = dname + 'Q10_test' + Q10_id + '.png';
 //	list[r[10]] = dname + 'Q11_test' + Q11_id + '.png';
@@ -103,6 +103,36 @@ var getlist_train_demo = function (nway,r) {
 	  	list[r[1]][c-1] = dname + 'Q2_train' + c + '.png';
 	  }
 
+	list[r[1]] = new Array();
+	for (var c=1; c <= nway; c++ ) {
+	  	list[r[1]][c-1] = dname + 'Q3_train' + c + '.png';
+	  }
+
+	list[r[1]] = new Array();
+	for (var c=1; c <= nway; c++ ) {
+	  	list[r[1]][c-1] = dname + 'Q4_train' + c + '.png';
+	  }
+
+	list[r[1]] = new Array();
+	for (var c=1; c <= nway; c++ ) {
+	  	list[r[1]][c-1] = dname + 'Q5_train' + c + '.png';
+	  }
+
+	list[r[1]] = new Array();
+	for (var c=1; c <= nway; c++ ) {
+	  	list[r[1]][c-1] = dname + 'Q6_train' + c + '.png';
+	  }
+
+	list[r[1]] = new Array();
+	for (var c=1; c <= nway; c++ ) {
+	  	list[r[1]][c-1] = dname + 'Q7_train' + c + '.png';
+	  }
+
+	list[r[1]] = new Array();
+	for (var c=1; c <= nway; c++ ) {
+	  	list[r[1]][c-1] = dname + 'Q8_train' + c + '.png';
+	  }
+
 		
 	return list;
 };
@@ -125,17 +155,17 @@ var getlist_test = function (type,ntask,nway) {
     var dname = 'images_classif/';
     var count = 0;
     list[0] = dname + 'task1' + type + '_test' + '2' + '.png';
-    list[1] = dname + 'task2' + type + '_test' + '1' + '.png';
-    list[2] = dname + 'task3' + type + '_test' + '4' + '.png';
-    list[3] = dname + 'task4' + type + '_test' + '1' + '.png';
-    list[4] = dname + 'task5' + type + '_test' + '3' + '.png';
+    list[1] = dname + 'task2' + type + '_test' + '3' + '.png';
+    list[2] = dname + 'task3' + type + '_test' + '1' + '.png';
+    list[3] = dname + 'task4' + type + '_test' + '2' + '.png';
+    list[4] = dname + 'task5' + type + '_test' + '4' + '.png';
     list[5] = dname + 'task6' + type + '_test' + '3' + '.png';
-    list[6] = dname + 'task7' + type + '_test' + '3' + '.png';
-    list[7] = dname + 'task8' + type + '_test' + '4' + '.png';
-    list[8] = dname + 'task9' + type + '_test' + '1' + '.png';
-    list[9] = dname + 'task10' + type + '_test' + '2' + '.png';
-    list[10] = dname + 'task11' + type + '_test' + '3' + '.png';
-    list[11] = dname + 'task12' + type + '_test' + '4' + '.png';
+    list[6] = dname + 'task7' + type + '_test' + '1' + '.png';
+    list[7] = dname + 'task8' + type + '_test' + '2' + '.png';
+//    list[8] = dname + 'task9' + type + '_test' + '1' + '.png';
+//    list[9] = dname + 'task10' + type + '_test' + '2' + '.png';
+//    list[10] = dname + 'task11' + type + '_test' + '3' + '.png';
+//    list[11] = dname + 'task12' + type + '_test' + '4' + '.png';
     return list;
 };
 
