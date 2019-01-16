@@ -103,34 +103,34 @@ var getlist_train_demo = function (nway,r) {
 	  	list[r[1]][c-1] = dname + 'Q2_train' + c + '.png';
 	  }
 
-	list[r[1]] = new Array();
+	list[r[2]] = new Array();
 	for (var c=1; c <= nway; c++ ) {
-	  	list[r[1]][c-1] = dname + 'Q3_train' + c + '.png';
+	  	list[r[2]][c-1] = dname + 'Q3_train' + c + '.png';
 	  }
 
-	list[r[1]] = new Array();
+	list[r[3]] = new Array();
 	for (var c=1; c <= nway; c++ ) {
-	  	list[r[1]][c-1] = dname + 'Q4_train' + c + '.png';
+	  	list[r[3]][c-1] = dname + 'Q4_train' + c + '.png';
 	  }
 
-	list[r[1]] = new Array();
+	list[r[4]] = new Array();
 	for (var c=1; c <= nway; c++ ) {
-	  	list[r[1]][c-1] = dname + 'Q5_train' + c + '.png';
+	  	list[r[4]][c-1] = dname + 'Q5_train' + c + '.png';
 	  }
 
-	list[r[1]] = new Array();
+	list[r[5]] = new Array();
 	for (var c=1; c <= nway; c++ ) {
-	  	list[r[1]][c-1] = dname + 'Q6_train' + c + '.png';
+	  	list[r[5]][c-1] = dname + 'Q6_train' + c + '.png';
 	  }
 
-	list[r[1]] = new Array();
+	list[r[6]] = new Array();
 	for (var c=1; c <= nway; c++ ) {
-	  	list[r[1]][c-1] = dname + 'Q7_train' + c + '.png';
+	  	list[r[6]][c-1] = dname + 'Q7_train' + c + '.png';
 	  }
 
-	list[r[1]] = new Array();
+	list[r[7]] = new Array();
 	for (var c=1; c <= nway; c++ ) {
-	  	list[r[1]][c-1] = dname + 'Q8_train' + c + '.png';
+	  	list[r[7]][c-1] = dname + 'Q8_train' + c + '.png';
 	  }
 
 		
