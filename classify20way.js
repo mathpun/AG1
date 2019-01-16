@@ -137,37 +137,37 @@ var getlist_train_demo = function (nway,r) {
 	return list;
 };
 
-// randomly choose a "test" image for each trial
-//var getlist_test = function (type,ntask,nway,oops) {
-//    var list = new Array();
-//    var dname = 'images_classif/';
-//  	var count = 0;
-//  	for (var i=1; i <= ntask; i++) {
-//  		var c = tu.randint(1,nway); // random choice of the image
-//  		list[count] = dname + 'task' + i + type + '_test' + c + '.png';
-//  		count++;
-//  	}
-//    return list;
-// };
-
-var getlist_test = function (type,ntask,nway) {
+//randomly choose a "test" image for each trial
+var getlist_test = function (type,ntask,nway,oops) {
     var list = new Array();
     var dname = 'images_classif/';
-    var count = 0;
-    list[0] = dname + 'task1' + type + '_test' + '2' + '.png';
-    list[1] = dname + 'task2' + type + '_test' + '3' + '.png';
-    list[2] = dname + 'task3' + type + '_test' + '1' + '.png';
-    list[3] = dname + 'task4' + type + '_test' + '2' + '.png';
-    list[4] = dname + 'task5' + type + '_test' + '4' + '.png';
-    list[5] = dname + 'task6' + type + '_test' + '3' + '.png';
-    list[6] = dname + 'task7' + type + '_test' + '1' + '.png';
-    list[7] = dname + 'task8' + type + '_test' + '2' + '.png';
+  	var count = 0;
+  	for (var i=1; i <= ntask; i++) {
+  		var c = tu.randint(1,nway); // random choice of the image
+  		list[count] = dname + 'task' + i + type + '_test' + c + '.png';
+  		count++;
+  	}
+    return list;
+ };
+
+//var getlist_test = function (type,ntask,nway) {
+//    var list = new Array();
+//    var dname = 'images_classif/';
+//    var count = 0;
+//    list[0] = dname + 'task1' + type + '_test' + '2' + '.png';
+//    list[1] = dname + 'task2' + type + '_test' + '3' + '.png';
+ //   list[2] = dname + 'task3' + type + '_test' + '1' + '.png';
+//    list[3] = dname + 'task4' + type + '_test' + '2' + '.png';
+//    list[4] = dname + 'task5' + type + '_test' + '4' + '.png';
+//    list[5] = dname + 'task6' + type + '_test' + '3' + '.png';
+ //   list[6] = dname + 'task7' + type + '_test' + '1' + '.png';
+//    list[7] = dname + 'task8' + type + '_test' + '2' + '.png';
 //    list[8] = dname + 'task9' + type + '_test' + '1' + '.png';
 //    list[9] = dname + 'task10' + type + '_test' + '2' + '.png';
 //    list[10] = dname + 'task11' + type + '_test' + '3' + '.png';
 //    list[11] = dname + 'task12' + type + '_test' + '4' + '.png';
-    return list;
-};
+//    return list;
+//};
 
 // enumerate the image set which is the training images
 var getlist_train = function (type,ntask,nway) {
