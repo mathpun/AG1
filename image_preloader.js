@@ -84,8 +84,8 @@ var image_preloader = function (list_list_fns,f_on_done,f_on_error,f_display_cou
 		nlist = list_list_fns.length;
 		// initialize loaded array to false		
 		for (var l=0; l<nlist; l++) {
-			//list_lengths[l] = list_list_fns[l].length; --naren 
-			list_lengths[l] = list_list_fns[l]; 
+			list_lengths[l] = list_list_fns[l].length;
+			//list_lengths[l] = list_list_fns[l]; --naren
 			ntot += list_lengths[l];
 			list_list_images[l] = new Array();
 		}
